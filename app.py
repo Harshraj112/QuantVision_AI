@@ -303,7 +303,7 @@ styled = display_df.style.format({
     "Market_Return_%": "{:+.2f}%",
     "Sharpe": "{:.4f}",
     "Max_Drawdown_%": "{:.2f}%",
-}).applymap(color_return, subset=["Strategy_Return_%", "Sharpe"])
+}).map(color_return, subset=["Strategy_Return_%", "Sharpe"])
 
 st.dataframe(styled, use_container_width=True, height=450)
 
